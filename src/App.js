@@ -4,17 +4,32 @@ import Footer from './components/footer/Footer';
 import Projects from './pages/projects';  
 import Home from './pages/home';
 import Contacts from './pages/contacts';
-import projectDetail from './pages/projectDetail';
+import ProjectDetail from './pages/ProjectDetail';
+
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 function App() {
   return (
     <div className="App">
-        
-     <Navbar/>
-      {/* <Home/> */}
-      {/* <Projects/> */}
-      {projectDetail}
-      {/* <Contacts/> */}
-      <Footer/>
+       <Router>
+        <Navbar/>
+
+        <Routes>
+            <Route  path='/' element={<Home/>} /> 
+            <Route  path='/projects' element={<Projects/>} /> 
+            <Route  path='/' element={<ProjectDetail/>} /> 
+            <Route  path='/contacts' element={<Contacts/>}  /> 
+                         
+
+            
+        </Routes>
+          {/* <Home/> */}
+          {/* <Projects/> */}
+          {/* {<ProjectDetail />} */}
+          {/* <Contacts/> */}
+          <Footer/>
+      </Router>
+      
     </div>
   );
 }

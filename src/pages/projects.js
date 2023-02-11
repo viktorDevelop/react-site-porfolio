@@ -7,8 +7,7 @@ const Projects = () => {
         <main className="section">
         <div className="container">
             <h2 className="title-1">Projects</h2>
-            <ul className="projects">
-                {console.log(dataProjects)}
+            <ul className="projects">               
                 {dataProjects.map((item,index)=>{
 
                     return (
