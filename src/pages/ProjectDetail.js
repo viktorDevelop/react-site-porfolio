@@ -1,27 +1,26 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Item from "../components/projects/Item";
+import  dataProjects from '../helpers/projectsList';
+
 const ProjectDetail = () => {
+
+    const  {id} = useParams();   
+    const getProject = (id)=>{
+         
+        let project =  dataProjects.filter(function(proj) {
+            return proj.id == id;
+        });
+        return project[0];
+    }
+     
+    
+
     return (
 
-
-        <main className="section">
-            <div className="container">
-                <div className="project-details">
-
-                    <h1 className="title-1">Video service</h1>
-
-                    <img src="images/projects/02-big.jpg" alt="" className="project-details__cover"/>
-
-                    <div className="project-details__desc">
-                        <p>Skills: React, Node.js, MongoDB</p>
-                    </div>
-
-                    <a href="#!" className="btn-outline">
-                        <img src="/img/icons/gitHub-black.svg" alt="" />
-                        GitHub repo
-                    </a>
-
-                </div>
-        </div>
-    </main>
+        <>
+         <Item project = {getProject(id)}></Item>
+        </>
 
     );
 }

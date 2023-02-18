@@ -14,6 +14,7 @@ const Projects = () => {
                         <Items key = {item.id}                                 
                                 img = {item.image}
                                 title = {item.title}
+                                id = {item.id}
 
                                  />
                     )
