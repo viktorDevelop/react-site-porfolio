@@ -4,14 +4,14 @@ const Header = function(){
     return (
         <header className="header">
         <div className="header__wrapper">
-            <h1 className="header__title">
-                <strong>Hi, my name is <em>Yuri</em></strong><br/>
-                a frontend developer
-            </h1>
+            <h1 className="header__title"> Portfolio </h1>
             <div className="header__text">
-                <p>with passion for learning and creating.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Explicabo autem dignissimos debitis tempore repellat iure,
+                      numquam asperiores unde molestiae eius assumenda amet,
+                     eveniet aspernatur earum enim quas inventore nobis vero.</p>
             </div>
-            <a href="#!" className="btn">Download CV</a>
+            
         </div>
     </header>
     )
