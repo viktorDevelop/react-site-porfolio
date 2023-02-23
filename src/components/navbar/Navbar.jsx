@@ -1,8 +1,8 @@
 import React from "react";
-import sun from '../../img/icons/sun.svg';
-import moon from '../../img/icons/moon.svg';
+
 import { NavLink } from "react-router-dom";
-const Navbar = function() {
+import SwitchTheme from "../SwitchTheme/SwitchTheme";
+ const Navbar = function() {
     const activeLink = 'nav-list__link--active';
     const normalLink = 'nav-list__link';
 
@@ -18,10 +18,7 @@ const Navbar = function() {
                  <strong>Freelancer</strong> portfolio
                 </NavLink>
                  
-                <button className="dark-mode-btn">
-                    <img src={sun} alt="Light mode" className="dark-mode-btn__icon" />
-                    <img src={moon} alt="Dark mode" className="dark-mode-btn__icon" />
-                </button>
+               <SwitchTheme/>
 
                 <ul className="nav-list">
                     
